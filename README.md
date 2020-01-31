@@ -1,6 +1,5 @@
 # Project Title
-
-One Paragraph of project description goes here
+A web app that connects to Yahoo Finance using the Scala Play Framework.
 
 ## Getting Started
 ```
@@ -15,9 +14,9 @@ sbt
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Play](https://www.playframework.com/) - The web framework used
+* [sbt](https://scala-lang.org) - Dependency Management
+* [Yahoo Finance Api](https://financequotes-api.com/) - API to connect to Yahoo Finance
 
 ## Contributing
 
