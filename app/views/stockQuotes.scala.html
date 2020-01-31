@@ -1,0 +1,18 @@
+@(stocks: Seq[String])
+@main("Stock Quotes"){
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Quotes</title>
+</head>
+<body>
+<ul>
+    @for(stockListings <- stocks){
+    <li>@stockListings</li>
+    }
+</ul>
+<div></div>
+<script type="text/javascript"></script>
+</body>
+</html>
+}
