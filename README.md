@@ -3,7 +3,11 @@ A web app that connects to Yahoo Finance using the Scala Play Framework.
 
 ## Getting Started
 ```
+In your terminal type:  
 sbt run
+In your browser type: 
+http://localhost:9000/stock_quotes/single_stock?stockListing=single stock 
+http://localhost:9000/stock_quotes/multiple_stocks?stockListings=multiple stock symbols delimited by "," 
 ```
 ### Prerequisites
 
@@ -34,7 +38,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [Yahoo Finance Api](https://financequotes-api.com/)
 

@@ -1,4 +1,4 @@
-@(stocks: Seq[String])
+@(stocks: String)
 @main("Stock Quotes"){
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@
     }
 </ul>
 <!-- Default form subscription -->
-<form method="get" action="@routes.StockQuotes.singleStock()" class="text-center border border-light p-5">
+<form method="get" action="#" class="text-center border border-light p-5">
 
     <p class="h4 mb-4">Enter Single Stock Listing</p>
 

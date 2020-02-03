@@ -17,20 +17,22 @@ class StockQuotes @Inject()(val controllerComponents: ControllerComponents) exte
   def singleStock(stockListing: String) = Action {
 
     val stock = YahooFinance.get(stockListing)
+    val symbol = stock.getSymbol
     val price = stock.getQuote.getPrice
     val change = stock.getQuote.getChangeInPercent
     val peg = stock.getStats.getPeg
     val dividend = stock.getDividend.getAnnualYieldPercent
     stock.print()
-    Ok(views.html.singleStockQuote)
+    Ok("Your stock listing is: " + symbol + "\n" +
+      "Your price is: " + price + "\n" +
+    "Your percent change is: " + change + "\n" +
+      "Your price/earnings to growth ratio is: " + peg + "\n" +
+    "Your dividend is: " + dividend + "\n")
   }
 
   def multipleStocks(stockListings: String) = Action {
-    val symbols = stockListings.split(",")
+    val symbols = Array[String](stockListings)
     val stocks = YahooFinance.get(symbols) // single request
-
-    val intel = stocks.get("INTC")
-    val airbus = stocks.get("AIR.PA")
-    Ok(symbols)
+    Ok("" + stocks)
   }
 }
