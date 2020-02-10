@@ -1,17 +1,15 @@
-@(stocks: Seq[String])
+@(stockListingInfo: Any)
 @main("Stock Quotes"){
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stock Quotes</title>
-</head>
-<body>
-<ul>
-    @for(stockListings <- stocks){
-    <li>@stockListings</li>
-    }
-</ul>
-<script type="text/javascript"></script>
-</body>
-</html>
+<div class="container mt-4">
+    <!-- Search form -->
+    <form class="form-inline" method="get" action="#">
+        <i class="fas fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3" type="text" placeholder="Search Stocks"
+               aria-label="Search Stocks">
+    </form>
+    <div class="container">
+        @stockListingInfo
+    </div>
+
+</div>
 }

@@ -1,5 +1,33 @@
 @()
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+@main("Stock Quotes Index") {
+<div class="container">
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-12 mb-4">
+
+    <div class="card">
+      <div class="card-body pl-0 pr-2 pb-0">
+        <div class="float-left white-text pl-4">
+          <p class="font-weight-light mb-1 mt-n1 text-white-50 font-small">Total Shipments</p>
+          <h2 class="font-weight-light">Performance</h2>
+        </div>
+        <div class="btn-group float-right pr-3" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-sm btn-primary" id="accountsData">Accounts</button>
+          <button type="button" class="btn btn-sm btn-primary" id="purchasesData">Purchases</button>
+          <button type="button" class="btn btn-sm btn-primary" id="sessionsData">Sessions</button>
+        </div>
+        <canvas id="lineChart" height="90"></canvas>
+      </div>
+    </div>
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+</div>
 }
