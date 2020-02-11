@@ -1,7 +1,6 @@
 package controllers
 
 import javax.inject._
-import play.api._
 import play.api.mvc._
 
 /**
@@ -10,7 +9,6 @@ import play.api.mvc._
  */
 @Singleton
 class HomeController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
-
   /**
    * Create an Action to render an HTML page.
    *
@@ -18,8 +16,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index() = Action { implicit request: Request[AnyContent] =>
+  def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
   }
-
 }

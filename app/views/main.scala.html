@@ -5,7 +5,6 @@
 * object to insert into the body of the page.
 *@
 @(title: String)(content: Html)
-
 <html lang="en">
 <head>
     @* Here's where we render the page title `String`. *@
@@ -34,12 +33,12 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <form class="form-inline mx-auto" method="get" action="stock_quotes/single_stock">
+        <form class="form-inline mx-auto" method="post" action="stock_quotes/single_stock?stockListing=MSFT">
             <div class="input-group md-form my-0">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
                 </div>
-                <input class="form-control mr-sm-2 mdb-autocomplete" id="form-autocomplete" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2 mdb-autocomplete" name="stockListing" id="form-autocomplete" type="text" placeholder="Search" aria-label="Search">
             </div>
         </form>
 

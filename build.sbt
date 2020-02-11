@@ -12,6 +12,8 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0
 
 libraryDependencies += "com.yahoofinance-api" % "YahooFinanceAPI" % "3.15.0"
 
+libraryDependencies += ws
+
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "orgerwill.controllers._"

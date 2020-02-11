@@ -1,66 +1,148 @@
 @()
 
+@import yahoofinance.{Stock, YahooFinance}
 @main("Stock Quotes Index") {
 <div class="container">
-  <div class="row">
-    <div class="card mb-4">
-      <div class="card-body mx-5">
-        <!-- Title -->
-        <h4 class="card-title">Default Stocks</h4>
-        <!-- Text -->
-        <p class="card-text">Here are some default stock quotes. Use the search bar to look up stocks.</p>
-      </div>
+    <div class="row">
+        <div class="card mb-4">
+            <div class="card-body mx-5">
+                <!-- Title -->
+                <h4 class="card-title">Default Stocks</h4>
+                <!-- Text -->
+                <p class="card-text">Here are some default stock quotes. Use the search bar to look up stocks.</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-<!-- Grid row -->
-<div class="row">
+    <!-- Grid row -->
+    <div class="row">
 
-  <!-- Grid column -->
-  <div class="col-md-12 mb-4">
+        <!-- Grid column -->
+        <div class="col-md-12 mb-4 ">
 
-    <table id="dt-basic-checkbox" class="table table-striped table-bordered" cellspacing="0" width="100%">
-      <thead>
-      <tr>
-        <th class="th-sm">Name
-        </th>
-        <th class="th-sm">Symbol
-        </th>
-        <th class="th-sm">Price
-        </th>
-        <th class="th-sm">Change In Percent
-        </th>
-        <th class="th-sm">Peg
-        </th>
-        <th class="th-sm">Dividend
-        </th>
-      </tr>
-      </thead>
-      <tbody>
+            <table id="dt-basic-checkbox" class="table-responsive table-striped table-bordered" cellspacing="0"
+                   width="100%">
+                <thead>
+                <tr>
+                    <th class="th-sm">Name
+                    </th>
+                    <th class="th-sm">Symbol
+                    </th>
+                    <th class="th-sm">Price
+                    </th>
+                    <th class="th-sm">Change In Percent
+                    </th>
+                    <th class="th-sm">Dividend
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        @YahooFinance.get("BABA").getName
+                    </td>
+                    <td>
+                        @YahooFinance.get("BABA").getSymbol
+                    </td>
+                    <td>
+                        $@YahooFinance.get("BABA").getQuote.getPrice
+                    </td>
+                    <td>
+                        @YahooFinance.get("BABA").getQuote.getChangeInPercent
+                    </td>
+                    <td>
+                        @YahooFinance.get("BABA").getDividend
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @YahooFinance.get("AAPL").getName
+                    </td>
+                    <td>
+                        @YahooFinance.get("AAPL").getSymbol
+                    </td>
+                    <td>
+                        $@YahooFinance.get("AAPL").getQuote.getPrice
+                    </td>
+                    <td>
+                        @YahooFinance.get("AAPL").getQuote.getChangeInPercent
+                    </td>
+                    <td>
+                        @YahooFinance.get("AAPL").getDividend
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @YahooFinance.get("NFLX").getName
+                    </td>
+                    <td>
+                        @YahooFinance.get("NFLX").getSymbol
+                    </td>
+                    <td>
+                        $@YahooFinance.get("NFLX").getQuote.getPrice
+                    </td>
+                    <td>
+                        @YahooFinance.get("NFLX").getQuote.getChangeInPercent
+                    </td>
+                    <td>
+                        @YahooFinance.get("NFLX").getDividend
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @YahooFinance.get("FB").getName
+                    </td>
+                    <td>
+                        @YahooFinance.get("FB").getSymbol
+                    </td>
+                    <td>
+                        $@YahooFinance.get("FB").getQuote.getPrice
+                    </td>
+                    <td>
+                        @YahooFinance.get("FB").getQuote.getChangeInPercent
+                    </td>
+                    <td>
+                        @YahooFinance.get("FB").getDividend
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @YahooFinance.get("MSFT").getName
+                    </td>
+                    <td>
+                        @YahooFinance.get("MSFT").getSymbol
+                    </td>
+                    <td>
+                        $@YahooFinance.get("MSFT").getQuote.getPrice
+                    </td>
+                    <td>
+                        @YahooFinance.get("MSFT").getQuote.getChangeInPercent
+                    </td>
+                    <td>
+                        @YahooFinance.get("MSFT").getDividend
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Name
+                    </th>
+                    <th>Symbol
+                    </th>
+                    <th>Price
+                    </th>
+                    <th>Change In Percent
+                    </th>
+                    <th>Dividend
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
 
-      </tbody>
-      <tfoot>
-      <tr>
-        <th>Name
-        </th>
-        <th>Symbol
-        </th>
-        <th>Price
-        </th>
-        <th>Change In Percent
-        </th>
-        <th>Peg
-        </th>
-        <th>Dividend
-        </th>
-      </tr>
-      </tfoot>
-    </table>
+        </div>
+        <!-- Grid column -->
 
-  </div>
-  <!-- Grid column -->
-
-</div>
-<!-- Grid row -->
+    </div>
+    <!-- Grid row -->
 </div>
 }
