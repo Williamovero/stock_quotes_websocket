@@ -351,3 +351,27 @@ var myBarChart = new Chart(ctxB, {
     }
   }
 });
+
+var stockQuotes = ["BABA","MSFT","GE"
+
+];
+
+
+$('#form-autocomplete').mdbAutocomplete({
+data: stockQuotes
+});
+
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-charts?comparisons=%255EGDAXI%252C%255EFCHI&region=US&lang=en&symbol=HYDR.ME&interval=5m&range=1d",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+		"x-rapidapi-key": "61d2531612mshe28820d2fe43ca9p107befjsnc64077844eb2"
+	}
+}
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});

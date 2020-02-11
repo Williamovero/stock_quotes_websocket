@@ -2,6 +2,16 @@
 
 @main("Stock Quotes Index") {
 <div class="container">
+  <div class="row">
+    <div class="card mb-4">
+      <div class="card-body mx-5">
+        <!-- Title -->
+        <h4 class="card-title">Default Stocks</h4>
+        <!-- Text -->
+        <p class="card-text">Here are some default stock quotes. Use the search bar to look up stocks.</p>
+      </div>
+    </div>
+  </div>
 
 <!-- Grid row -->
 <div class="row">
@@ -9,20 +19,43 @@
   <!-- Grid column -->
   <div class="col-md-12 mb-4">
 
-    <div class="card">
-      <div class="card-body pl-0 pr-2 pb-0">
-        <div class="float-left white-text pl-4">
-          <p class="font-weight-light mb-1 mt-n1 text-white-50 font-small">Total Shipments</p>
-          <h2 class="font-weight-light">Performance</h2>
-        </div>
-        <div class="btn-group float-right pr-3" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-sm btn-primary" id="accountsData">Accounts</button>
-          <button type="button" class="btn btn-sm btn-primary" id="purchasesData">Purchases</button>
-          <button type="button" class="btn btn-sm btn-primary" id="sessionsData">Sessions</button>
-        </div>
-        <canvas id="lineChart" height="90"></canvas>
-      </div>
-    </div>
+    <table id="dt-basic-checkbox" class="table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+      <tr>
+        <th class="th-sm">Name
+        </th>
+        <th class="th-sm">Symbol
+        </th>
+        <th class="th-sm">Price
+        </th>
+        <th class="th-sm">Change In Percent
+        </th>
+        <th class="th-sm">Peg
+        </th>
+        <th class="th-sm">Dividend
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+      <tfoot>
+      <tr>
+        <th>Name
+        </th>
+        <th>Symbol
+        </th>
+        <th>Price
+        </th>
+        <th>Change In Percent
+        </th>
+        <th>Peg
+        </th>
+        <th>Dividend
+        </th>
+      </tr>
+      </tfoot>
+    </table>
 
   </div>
   <!-- Grid column -->

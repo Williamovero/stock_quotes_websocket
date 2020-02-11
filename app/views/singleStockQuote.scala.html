@@ -1,10 +1,19 @@
-@(stocks: String, stockListingInfo: List[Any])
+@(stockName: String, stocks: String,price: String, stockStats: Array[String])
 @main("Stock Quotes"){
 <div class="container mt-5">
-        <div class="mb-4">
-        @stocks
+    <!-- Card -->
+    <div class="card mb-4">
+        <!-- Card content -->
+        <div class="card-body mx-5">
+            <!-- Title -->
+            <h4 class="card-title">@stockName: @stocks</h4>
+            <h5 class="card-subtitle mb-2 text-muted">@price</h5>
+            <!-- Text -->
+            @for(stats <- stockStats){
+            <p class="card-text">@stats</p>
+            }
         </div>
-        @stockListingInfo
-
+    </div>
+    <!-- Card -->
 </div>
 }

@@ -29,17 +29,17 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark dark-cornflower-blue mb-4">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand tea-green-text" href="#">Stock Quotes</a>
+    <a class="navbar-brand tea-green-text" href="/">Stock Quotes</a>
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <form class="form-inline mx-auto">
+        <form class="form-inline mx-auto" method="get" action="stock_quotes/single_stock">
             <div class="input-group md-form my-0">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
                 </div>
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2 mdb-autocomplete" id="form-autocomplete" type="text" placeholder="Search" aria-label="Search">
             </div>
         </form>
 
@@ -53,8 +53,8 @@
 @content
 
 <!-- Footer -->
-<footer class="page-footer font-small dark-cornflower-blue" id="footer">
-    <div class="footer-copyright text-center py-3">&copy; Stock Quotes WebSocket</div>
+<footer class="page-footer font-small dark-cornflower-blue fixed-bottom" id="footer">
+    <div class="footer-copyright text-center py-3 white-text">&copy; Stock Quotes WebSocket</div>
 </footer>
 <!-- Footer -->
 
@@ -67,6 +67,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/js/mdb.min.js"></script>
+<script type='text/javascript' src='@routes.Assets.versioned("javascripts/main.js")'></script>
 
     </body>
 </html>
